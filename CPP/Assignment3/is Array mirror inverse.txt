@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int n;
+	cin>>n;
+
+	int a[n];
+	for(int i=0;i<n;i++)
+	cin>>a[i];
+
+	bool equal=true;
+
+	for (int i = 0; i < n; i++)
+    {
+ 
+        if (a[a[i]] != i)
+         {
+			 equal=false;
+			 break;
+		 }
+    }
+
+	if(equal)
+	cout<<"true"<<endl;
+
+	else
+	cout<<"false"<<endl;
+	return 0;
+}

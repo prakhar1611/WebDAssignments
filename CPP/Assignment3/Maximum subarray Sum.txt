@@ -1,0 +1,29 @@
+#include<iostream>
+#include<climits>
+using namespace std;
+int main() {
+	int n;
+	cin>>n;
+
+	int a[n];
+
+	for(int i=0;i<n;i++)
+	cin>>a[i];
+	
+	int max=0;
+	int finmax=INT_MIN;
+
+	for(int i=0;i<n;i++)
+	{
+		max+=a[i];
+
+		if(finmax<max)
+		finmax=max;
+
+		if(max<0)
+		max=0;
+	}
+
+	cout<<finmax<<endl;
+	return 0;
+}
